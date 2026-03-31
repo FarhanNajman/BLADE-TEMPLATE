@@ -10,6 +10,7 @@
     <h1>Halaman Mahasigma</h1>
     <ol>
         <li><?=  $mhs1 ?></li>
+        <li> {{ $mhs2 }} </li>
         <li> NAJMAN</li>
         <li> NAJMAN</li>
         <li> NAJMAN</li>

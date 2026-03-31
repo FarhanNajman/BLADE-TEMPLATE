@@ -1,7 +1,18 @@
 <?php
 
+use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\Auth\DosenController;
 use Illuminate\Support\Facades\Route;
 
+
+// Default route
+Route::get('/', function () {
+    return view('welcome');
+});
+Route::get('/dosen',[DosenController::class, 'index']);
+Route::get('/mahasiswa',[MahasiswaController::class, 'index']);
+
+/*
 Route::get('/', function () {
     return view('welcome');
 });
@@ -18,11 +29,11 @@ Route::get("/mahasiswa/{nama}", function ($nama) {
     return "Cihuyy  $nama";
 });
 Route::get("/mahasiswa/{nama}/{nim}", function ($nama, $nim) {
-    return "Cihuyy  $nama, NIM: $nim";
+    return "Pak  $nama, NIM: $nim";
 });
 //route opsional parameter=tidak wajib (?)
 Route::get("/mahasiswa/{dosen?}/{nik?}", function ($dosen="a1", $nik="b1") {
-    return "Cihuyy  $dosen, NIM: $nik";
+    return "Pak  $dosen, NIK: $nik";
 });
 Route::redirect('/home','/mahasiswa');
 Route::fallback(function () {

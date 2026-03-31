@@ -14,7 +14,7 @@
   <body class="d-flex flex-column h-100">
     @include('layouts.header')
 
-    <main class="flex-shrink-0">
+    <main class="flex-shrink-0 text-center">
       <div class="container">
         @yield('content')
       </div>
